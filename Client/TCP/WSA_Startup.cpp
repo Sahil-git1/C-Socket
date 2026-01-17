@@ -49,7 +49,7 @@ void sendMessage(SOCKET clientSocket) {
             isChatOpen = false;
             cout<< "Exiting...";
             shutdown(clientSocket, SD_BOTH);
-            closesocket(serverSocket); 
+            closesocket(clientSocket); 
             break;
         }
         int bytes = send(clientSocket, buffer, strlen(buffer), 0);
